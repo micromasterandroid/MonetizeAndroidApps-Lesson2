@@ -5,11 +5,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.NativeExpressAdView;
 
@@ -36,10 +37,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        NativeExpressAdView adView = (NativeExpressAdView)findViewById(R.id.adView);
+        //NativeExpressAdView nativeExpressAdView = (NativeExpressAdView) findViewById(R.id.adView0);
+        AdView bannerAdView = (AdView) findViewById(R.id.adView1);
 
         AdRequest request = new AdRequest.Builder().build();
-        adView.loadAd(request);
+        //nativeExpressAdView.loadAd(request);
+        bannerAdView.loadAd(request);
     }
 
     @Override
